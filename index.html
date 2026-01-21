@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Visibility Toggle</title>
+</head>
+<body>
+
+    <h2>Password Visibility Toggle</h2>
+
+    <form>
+        <label>Password:</label>
+        <input type="password" id="pwd" value="hello">
+        <br><br>
+
+        <input type="checkbox" onclick="togglePassword()"> Show Password
+    </form>
+
+    <script>
+        function togglePassword() {
+            let passwordField = document.getElementById("pwd");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>
